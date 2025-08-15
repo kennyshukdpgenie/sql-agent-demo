@@ -1,0 +1,27 @@
+# Dependencies
+node_modules
+.env
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Build files
+dist
+build
+.next
+.nuxt
+
+# Misc
+.DS_Store
+*.pem
+*.log
+.vscode
+coverage
+.history
+.idea
+*.suo
+*.user
+*.sln
+*.cache
+*.swp 

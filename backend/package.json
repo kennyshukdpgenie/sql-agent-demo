@@ -1,0 +1,33 @@
+{
+  "name": "suit-crm-backend",
+  "version": "1.0.0",
+  "description": "Backend for Suit CRM system",
+  "main": "dist/app.js",
+  "scripts": {
+    "start": "node dist/app.js",
+    "dev": "ts-node-dev --respawn --transpile-only src/app.ts",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "clean": "rimraf dist",
+    "build:clean": "npm run clean && npm run build"
+  },
+  "dependencies": {
+    "@types/sqlite3": "^3.1.11",
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.21.2",
+    "sqlite3": "^5.1.7",
+    "tedious": "^16.7.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.17",
+    "@types/node": "^18.15.11",
+    "@types/tedious": "^4.0.14",
+    "rimraf": "^5.0.1",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.0.3"
+  }
+}

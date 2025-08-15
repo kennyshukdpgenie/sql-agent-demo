@@ -1,0 +1,265 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar styles with Pernod Ricard colors */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8fafb;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #79ACD2;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #123F75;
+}
+
+/* Smooth animations */
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Custom textarea auto-resize */
+textarea {
+  resize: none;
+  overflow-y: auto;
+  min-height: 48px;
+  max-height: 120px;
+  color: #002957;
+}
+
+/* Message bubble animations */
+.message-bubble {
+  animation: messageSlide 0.3s ease-out;
+}
+
+@keyframes messageSlide {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Loading dots animation */
+.loading-dots {
+  display: inline-block;
+}
+
+.loading-dots::after {
+  content: '...';
+  animation: dots 1.5s infinite;
+}
+
+@keyframes dots {
+  0%, 20% {
+    content: '.';
+  }
+  40% {
+    content: '..';
+  }
+  60%, 100% {
+    content: '...';
+  }
+}
+
+/* Syntax highlighting for code blocks with Pernod Ricard theme */
+.code-block {
+  background-color: #f0f6fc;
+  border: 1px solid #79ACD2;
+  border-radius: 8px;
+  padding: 12px;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.4;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  color: #002957;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+  }
+  
+  .chat-container {
+    margin-right: 0 !important;
+  }
+}
+
+/* Focus states with Pernod Ricard colors */
+button:focus,
+textarea:focus,
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(121, 172, 210, 0.5);
+}
+
+/* Hover effects */
+.hover-lift:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 41, 87, 0.1);
+}
+
+/* Custom selection colors with Pernod Ricard theme */
+::selection {
+  background-color: rgba(121, 172, 210, 0.3);
+  color: #002957;
+}
+
+/* Enhanced button styles */
+.btn-primary {
+  background: linear-gradient(135deg, #123F75 0%, #002957 100%);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #002957 0%, #123F75 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 41, 87, 0.2);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #79ACD2 0%, #123F75 100%);
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(135deg, #123F75 0%, #79ACD2 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(121, 172, 210, 0.2);
+}
+
+/* Enhanced message styling */
+.message-user {
+  background: linear-gradient(135deg, #123F75 0%, #002957 100%);
+  box-shadow: 0 2px 8px rgba(0, 41, 87, 0.1);
+}
+
+.message-assistant {
+  background: #ffffff;
+  border: 1px solid #79ACD2;
+  box-shadow: 0 2px 8px rgba(121, 172, 210, 0.1);
+}
+
+/* Header gradient */
+.header-gradient {
+  background: linear-gradient(135deg, #002957 0%, #123F75 100%);
+}
+
+/* Sidebar enhancements */
+.sidebar-header {
+  background: linear-gradient(135deg, #002957 0%, #123F75 100%);
+}
+
+/* Accessibility improvements */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Enhanced focus indicators */
+.focus-visible:focus {
+  outline: 2px solid #79ACD2;
+  outline-offset: 2px;
+}
+
+/* Loading animation enhancements */
+.loading-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Print styles */
+@media print {
+  .sidebar,
+  .input-area,
+  button {
+    display: none !important;
+  }
+  
+  .message-bubble {
+    break-inside: avoid;
+    margin-bottom: 1rem;
+    border: 1px solid #79ACD2 !important;
+    background: white !important;
+    color: #002957 !important;
+  }
+  
+  .header-gradient {
+    background: #002957 !important;
+    color: white !important;
+  }
+}
+
+/* Dark mode support (optional) */
+@media (prefers-color-scheme: dark) {
+  .dark-mode {
+    background-color: #002957;
+    color: #79ACD2;
+  }
+  
+  .dark-mode .message-assistant {
+    background: #123F75;
+    border-color: #79ACD2;
+    color: white;
+  }
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+} 

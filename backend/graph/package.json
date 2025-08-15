@@ -1,0 +1,16 @@
+{
+  "name": "chart-service",
+  "version": "1.0.0",
+  "description": "A service to generate charts.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "body-parser": "^1.19.0",
+    "chart.js": "^3.7.0",
+    "chartjs-plugin-datalabels": "^2.0.0",
+    "chartjs-node-canvas": "^4.1.6"
+  }
+} 

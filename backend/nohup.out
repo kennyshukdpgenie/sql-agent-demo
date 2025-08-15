@@ -1,0 +1,16 @@
+/home/Suit_CRM/backend/main.py:69: DeprecationWarning: 
+        on_event is deprecated, use lifespan event handlers instead.
+
+        Read more about it in the
+        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+        
+  @app.on_event("startup")
+INFO:     Started server process [293802]
+INFO:     Waiting for application startup.
+Server starting up
+Connecting to SQL Server: rm-uf6am28eh5qk2naa7vo.sqlserver.rds.aliyuncs.com:3433, Database: shirt_order_test
+Successfully connected to SQL Server database
+SQL Server database initialized successfully
+Database initialized on startup
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8889 (Press CTRL+C to quit)

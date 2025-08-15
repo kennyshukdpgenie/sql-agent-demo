@@ -1,0 +1,119 @@
+.order-view-page {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @media (max-width: 600px) {
+    padding: 12px;
+  }
+
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+
+    @media (max-width: 600px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.8rem;
+
+      @media (max-width: 600px) {
+        font-size: 1.4rem;
+      }
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 8px;
+
+      @media (max-width: 600px) {
+        width: 100%;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  .ant-table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+
+    @media (max-width: 600px) {
+      margin: 0 -12px;
+      width: calc(100% + 24px);
+    }
+  }
+
+  .ant-table {
+    min-width: 800px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    @media (max-width: 600px) {
+      font-size: 0.9rem;
+    }
+  }
+
+  .ant-table-thead > tr > th {
+    background: #fafafa;
+
+    @media (max-width: 600px) {
+      padding: 8px;
+      font-size: 0.9rem;
+    }
+  }
+
+  .ant-table-tbody > tr > td {
+    @media (max-width: 600px) {
+      padding: 8px;
+    }
+  }
+
+  .ant-dropdown-menu {
+    max-height: 400px;
+    overflow-y: auto;
+  }
+
+  .ant-checkbox-wrapper {
+    @media (max-width: 600px) {
+      font-size: 0.9rem;
+    }
+  }
+
+  .ant-btn {
+    @media (max-width: 600px) {
+      padding: 4px 8px;
+      font-size: 0.9rem;
+    }
+  }
+
+  .editable-cell {
+    @media (max-width: 600px) {
+      padding: 4px;
+    }
+  }
+
+  .ant-input,
+  .ant-select,
+  .ant-input-number {
+    @media (max-width: 600px) {
+      font-size: 16px; // Prevents zoom on iOS
+    }
+  }
+
+  .editable-cell-value-wrap {
+    padding: 5px 12px;
+    cursor: pointer;
+    &:hover {
+      border: 1px solid #d9d9d9;
+      border-radius: 4px;
+      padding: 4px 11px;
+    }
+  }
+} 
